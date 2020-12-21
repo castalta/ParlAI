@@ -63,14 +63,16 @@ WEB_HTML = """
                         </p>
                         <p class="control">
                           <button id="respond" type="submit" class="button has-text-white-ter has-background-mypink">
-                            Submit
+                            Send
                           </button>
                         </p>
+                        <!--
                         <p class="control">
                           <button id="restart" type="reset" class="button has-text-white-ter has-background-mypink">
                             Restart
                           </button>
                         </p>
+                        -->
                       </div>
                   </form>
                 </div>
@@ -98,16 +100,13 @@ WEB_HTML = """
                 var speaker = document.createElement("img");
                 speaker.id = speakerId;
                 speaker.src = "https://altavista21.com/img/speaker_off_pc.png";
-                speaker.alt = text;
-                // speaker.setAttribute("onclick");
-                // attribute.nodevalue=speakerId;
-                // speaker.setAttributeNode(attribute);
-                // speaker.onclick = sound(speakerId);
-                // speaker.setAttribute("onclick", "sound("+ keynum + ")");
+                // speaker.alt = text;
+                var spkid = String(speakerId);
+                speaker.setAttribute("onclick", spkid);
                 }}
                 div.appendChild(p);
                 if(agent === "Model"){{
-                    p.className = "typewriter wb";
+                    p.className = "wb";
                 }}
                 p.appendChild(paraText);
                 article.appendChild(div);
@@ -121,9 +120,9 @@ WEB_HTML = """
                 var tran = document.createElement("img");
                 tran.src = "https://altavista21.com/img/translate.png";
                 article.appendChild(tran);
-                var note = document.createElement("img");
-                note.src = "https://altavista21.com/img/note.png";
-                article.appendChild(note);
+                // var note = document.createElement("img");
+                // note.src = "https://altavista21.com/img/note.png";
+                // article.appendChild(note);
                 var abc = sessionStorage.getItem(keynum);
                 console.log("text id " + keynum),console.log(abc);
                 console.log("sound id" + speaker.id);
