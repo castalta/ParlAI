@@ -110,7 +110,6 @@ WEB_HTML = """
                 }}
                 p.appendChild(paraText);
                 article.appendChild(div);
-
                 // buttons
                 if(agent === "Model"){{
                 var br = document.createElement("br");
@@ -129,7 +128,6 @@ WEB_HTML = """
                 }}
                 return article;
             }}
-
          document.getElementById("interact").addEventListener("submit", function(event){{
                 event.preventDefault()
                 var text = document.getElementById("userIn").value;
@@ -158,7 +156,6 @@ WEB_HTML = """
                     div.appendChild(img);
                     div.appendChild(img1);
                     aityping.scrollTo(0, aityping.scrollHeight);
-
                 fetch('/interact', {{
                     headers: {{
                         'Content-Type': 'application/json'
@@ -167,9 +164,7 @@ WEB_HTML = """
                     body: text
                 }}).then(response=>response.json()).then(data=>{{
                     var parDiv = document.getElementById("parent");
-
                     // parDiv.append(createChatRow("You", text));
-
                     // Change info for Model response
                     div.remove();
                     img.remove();
@@ -182,7 +177,6 @@ WEB_HTML = """
                 event.preventDefault()
                 var text = document.getElementById("userIn").value;
                 document.getElementById('userIn').value = "";
-
                 fetch('/reset', {{
                     headers: {{
                         'Content-Type': 'application/json'
@@ -190,7 +184,6 @@ WEB_HTML = """
                     method: 'POST',
                 }}).then(response=>response.json()).then(data=>{{
                     var parDiv = document.getElementById("parent");
-
                     parDiv.innerHTML = '';
                     parDiv.scrollTo(0, parDiv.scrollHeight);
                 }})
