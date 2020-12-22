@@ -102,7 +102,7 @@ WEB_HTML = """
                 speaker.src = "https://altavista21.com/img/speaker_off_pc.png";
                 // speaker.alt = text;
                 var spkid = String(speakerId);
-                speaker.setAttribute("onclick", spkid);
+                speaker.setAttribute("onclick", "speakerId"+ spkid +"()");
                 }}
                 div.appendChild(p);
                 if(agent === "Model"){{
