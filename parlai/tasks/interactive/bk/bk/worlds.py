@@ -95,7 +95,7 @@ class InteractiveWorld(DialogPartnerWorld):
             else:
                 act = Message({'text': message, 'episode_done': False})
             logging.info(f'Observing message {message}')
-            agents[1].observe(validate(act))
+              agents[1].observe(validate(act))
 
         acts[1] = agents[1].act()
         agents[0].observe(validate(acts[1]))

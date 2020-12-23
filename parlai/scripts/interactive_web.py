@@ -51,7 +51,7 @@ WEB_HTML = """
                           <p class="typewriter wordb">
                             <strong>Alisa</strong>
                             <br>
-                            Hi, please enter a message.
+                            Hi, How are you today?
                           </p>
                         </div>
                 </div>
