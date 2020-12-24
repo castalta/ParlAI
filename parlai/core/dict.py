@@ -490,12 +490,12 @@ class DictionaryAgent(Agent):
         Use re_tokenize if you want more robust handling of punctuation.
         """
         return (
-            text.replace('.', ' . ')
-            .replace(',', ' , ')
-            .replace(';', ' ; ')
-            .replace(':', ' : ')
-            .replace('!', ' ! ')
-            .replace('?', ' ? ')
+            text.replace('.', '. ')
+            .replace(',', ', ')
+            .replace(';', '; ')
+            .replace(':', ': ')
+            .replace('!', '! ')
+            .replace('?', '? ')
             .split()
         )
 

@@ -81,6 +81,7 @@ WEB_HTML = """
         <script>
              var keynum = 100;
              var speakerId = 0;
+             var ptagId = 1000;
              function createChatRow(agent, text) {{
                 var article = document.createElement("article");
                 var div = document.createElement("div");
@@ -94,8 +95,11 @@ WEB_HTML = """
                 var p = document.createElement("p");
                 var paraText = document.createTextNode(text);
                 if(agent === "Model"){{
+                ptagId+=1;
                 keynum+=1;
                 speakerId+=1;
+                var ptag = String(ptagId);
+                p.id = "ptagId" + ptag;
                 sessionStorage.setItem(keynum, text);
                 var speaker = document.createElement("img");
                 speaker.id = speakerId;
@@ -110,6 +114,7 @@ WEB_HTML = """
                 }}
                 p.appendChild(paraText);
                 article.appendChild(div);
+
                 // buttons
                 if(agent === "Model"){{
                 var br = document.createElement("br");
@@ -126,7 +131,11 @@ WEB_HTML = """
                 console.log("text id " + keynum),console.log(abc);
                 console.log("sound id" + speaker.id);
                 }}
-                return article;
+                  //  base2 = '/"' + ptag + '/"';
+                  // var str = document.getElementById('/"'+ptag+'/"').innerHTML;
+                  // str = str.replace("you","youuuuu");
+                  // document.getElementById('/"'+ptag+'/"').innerHTML = str;
+               return article;
             }}
          document.getElementById("interact").addEventListener("submit", function(event){{
                 event.preventDefault()

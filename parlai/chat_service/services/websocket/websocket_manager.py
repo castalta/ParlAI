@@ -16,7 +16,7 @@ from parlai.chat_service.core.chat_service_manager import ChatServiceManager
 import parlai.chat_service.utils.logging as log_utils
 import parlai.chat_service.utils.misc as utils
 from parlai.chat_service.services.websocket.sockets import MessageSocketHandler
-from agents import WebsocketAgent
+from .agents import WebsocketAgent
 import tornado
 from tornado.options import options
 
@@ -187,9 +187,7 @@ class WebsocketManager(ChatServiceManager):
     def _create_agent(self, task_id, socketID):
         """
         Initialize an agent and return it.
-
         Called each time an agent is placed into a new task.
-
         :param task_id:
             string task identifier
         :param agent_id:
@@ -217,24 +215,22 @@ class WebsocketManager(ChatServiceManager):
             debug=self.debug,
         )
 
-    def observe_message(self, socket_id, message, quick_replies=None, message_history=[]):
+    def observe_message(self, socket_id, message, quick_replies=None):
         """
         Send a message through the message manager.
-
         :param socket_id:
             int identifier for agent socket to send message to
         :param message:
             (str) message to send through the socket.
         :param quick_replies:
             (list) list of strings to send as quick replies.
-
         Returns a tornado future for tracking the `write_message` action.
         """
         if quick_replies is not None:
             quick_replies = list(quick_replies)
 
         message = json.dumps(
-            {'text': message.replace('\n', '<br />'), 'quick_replies': quick_replies, 'message_history': message_history}
+            {'text': message.replace('\n', '<br />'), 'quick_replies': quick_replies}
         )
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
@@ -246,7 +242,6 @@ class WebsocketManager(ChatServiceManager):
     def observe_payload(self, socket_id, payload, quick_replies=None):
         """
         Send a message through the message manager.
-
         :param socket_id:
             int identifier for agent socket to send message to
         :param payload:
@@ -255,7 +250,6 @@ class WebsocketManager(ChatServiceManager):
                     'data': str. base64 encoded content
                     If 'type' is 'image', the 'mime_type' (str) key can be provided
                     to specify the Mime type of the image
-
         Returns a tornado future for tracking the `write_message` action.
         """
         message = {'text': '', 'payload': payload, 'quick_replies': quick_replies}

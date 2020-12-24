@@ -98,7 +98,6 @@ class BrowserHandler(BaseHTTPRequestHandler):
         response = self._handle_http(opts['status'], self.path)
         self.wfile.write(response)
 
-
 def on_message(ws, message):
     """
     Prints the incoming message from the server.
@@ -106,10 +105,10 @@ def on_message(ws, message):
     :param message: json with 'text' field to be printed
     """
     incoming_message = json.loads(message)
+
     global new_message
     new_message = incoming_message['text']
     message_available.set()
-
 
 def on_error(ws, error):
     """
