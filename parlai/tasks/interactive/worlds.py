@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Copyright (c) Facebook, Inc. and its affiliates.
-# This source code is licensed under the MIT license found in the
+# This source code is licensed under the MIT license found in
 # LICENSE file in the root directory of this source tree.
 
 from copy import deepcopy
@@ -9,6 +9,7 @@ from copy import deepcopy
 from parlai.core.worlds import DialogPartnerWorld, validate
 from parlai.core.message import Message
 
+import logging
 
 class InteractiveWorld(DialogPartnerWorld):
     """
@@ -23,6 +24,7 @@ class InteractiveWorld(DialogPartnerWorld):
         super().__init__(opt, agents, shared)
         self.init_contexts(shared=shared)
         self.turn_cnt = 0
+        self.first_time = True
 
     def init_contexts(self, shared=None):
         """
@@ -49,17 +51,20 @@ class InteractiveWorld(DialogPartnerWorld):
 
         Alternate between the two agents.
         """
-        if self.turn_cnt == 0:
-            self.p1, self.p2 = self.get_contexts()
-
+        
         acts = self.acts
         agents = self.agents
-        if self.turn_cnt == 0 and self.p1 != '':
-            # add the context on to the first message to agent 0
-            context_act = Message(
-                {'id': 'context', 'text': self.p1, 'episode_done': False}
+
+        if self.first_time:
+            agents[0].observe(
+                {
+                    'id': 'World',
+                    'text': 'Hello!',
+                }
             )
-            agents[0].observe(validate(context_act))
+            self.first_time = False
+            return
+ 
         try:
             act = deepcopy(agents[0].act())
         except StopIteration:
@@ -67,14 +72,31 @@ class InteractiveWorld(DialogPartnerWorld):
             self.finalize_episode()
             self.turn_cnt = 0
             return
+
+        if not act:
+            return
+
+        act_text = act.get('text', None)
+        logging.info('Act: ' + str(act))
+        message_history = act.get('message_history', [])
+        logging.info(str(message_history))
+
         acts[0] = act
-        if self.turn_cnt == 0 and self.p2 != '':
-            # add the context on to the first message to agent 1
-            context_act = Message(
-                {'id': 'context', 'text': self.p2, 'episode_done': False}
-            )
-            agents[1].observe(validate(context_act))
-        agents[1].observe(validate(act))
+        if act_text and '[DONE]' in act_text:
+            agents[0].observe(validate(Message({'text': 'Goodbye!', 'episode_done': True})))
+            self.reset()
+            return
+
+        logging.info('Starting observing message history')
+        for message in message_history + [act_text]:
+            if message and message.startswith('your persona:'):
+                act = Message({'id': 'context', 'text': message,
+                               'episode_done': False})
+            else:
+                act = Message({'text': message, 'episode_done': False})
+            logging.info(f'Observing message {message}')
+            agents[1].observe(validate(act))
+
         acts[1] = agents[1].act()
         agents[0].observe(validate(acts[1]))
         self.update_counters()
@@ -83,3 +105,5 @@ class InteractiveWorld(DialogPartnerWorld):
         if act['episode_done']:
             self.finalize_episode()
             self.turn_cnt = 0
+
+        self.reset()

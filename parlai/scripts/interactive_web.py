@@ -118,12 +118,12 @@ WEB_HTML = """
                 // buttons
                 if(agent === "Model"){{
                 var br = document.createElement("br");
-                article.appendChild(br);
-                article.appendChild(speaker);
+                // article.appendChild(br);
+                // article.appendChild(speaker);
                 
                 var tran = document.createElement("img");
                 tran.src = "https://altavista21.com/img/translate.png";
-                article.appendChild(tran);
+                // article.appendChild(tran);
                 // var note = document.createElement("img");
                 // note.src = "https://altavista21.com/img/note.png";
                 // article.appendChild(note);
