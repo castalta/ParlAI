@@ -38,6 +38,14 @@ WEB_HTML = """
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186249509-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'UA-186249509-1');
+    </script>
     </head>
     <body>
      <div style="text-align: center">
