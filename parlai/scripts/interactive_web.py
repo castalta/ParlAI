@@ -57,33 +57,23 @@ WEB_HTML = """
                 <div id="parent" class="hero-body scrollbar_none" style="overflow-wrap: normal;overflow-y:auto; height: calc(100% - 76px); padding-top: 1em; padding-bottom: 0;">
                         <div class="bubble04">
                           <p class="typewriter wordb">
-                            <strong>Alisa</strong>
-                            <br>
-                            Hi, How are you today?
+                            Hi, Hello!
                           </p>
                         </div>
                 </div>
-                <div style="margin:0 auto;" class="hero-foot column is-four-fifths" style="height: 76px">
-                  <form id = "interact">
-                      <div class="field is-grouped">
-                        <p class="control is-expanded">
-                          <input class="input my-blue2" type="text" id="userIn" placeholder="Type in a message">
-                        </p>
-                        <p class="control">
-                          <button id="respond" type="submit" class="button has-text-white-ter has-background-mypink">
-                            Send
-                          </button>
-                        </p>
-                        <!--
-                        <p class="control">
-                          <button id="restart" type="reset" class="button has-text-white-ter has-background-mypink">
-                            Restart
-                          </button>
-                        </p>
-                        -->
-                      </div>
-                  </form>
+                <form id = "interact">
+                <div style="margin:0 auto;" class="cp_iptxt" style="height: 76px">
+                
+                <table align="center" width="70%">
+                <tr>
+                <td><input class="ef" type="text" id="userIn" placeholder="Type in a message"></td>
+                
+                <td><input id="respond" type="image" src="https://altavista21.com/img/send_sp3.png" alt="send"></td>
+                
+                </tr>
+                </table>
                 </div>
+                </form>
             </div>
         </div>
         <script>
