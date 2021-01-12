@@ -61,11 +61,13 @@ WEB_HTML = """
                           </p>
                         </div>
                 </div>
-                <div style="margin:0 auto;" class="cp_iptxt" width="95%">
+                
+                <div style="margin:0 auto;" class="hero-foot column is-four-fifths" style="height: 76px">
                 <form id = "interact">
-                <table align="center" width="95%">
+                <table align="center" width="90%">
                 <tr>
-                <td><input class="ef" type="text" id="userIn" placeholder="Type in a message"></td>
+                <td><input class="input my-blue2" type="text" id="userIn" placeholder="Type in a message"></td>
+                <span class="focus_line"></span>
                 <td><input id="respond" type="image" src="https://altavista21.com/img/send_sp3.png" alt="send"></td>
                 
                 </tr>
