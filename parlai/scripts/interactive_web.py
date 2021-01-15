@@ -58,7 +58,7 @@ WEB_HTML = """
      <td class="left font_color"><br>
 This is the beta version of AI English conversation bot for free! Enjoy the conversation.<br>
 <br>
-If you don't mind, please email us your review.
+If you don't mind, please email us your review.<br>
      <a href="mailto:alisa10202100@gmail.com">Send Mail</a>
      </td>
      </tr>
