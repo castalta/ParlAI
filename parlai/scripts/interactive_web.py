@@ -62,10 +62,8 @@ This is the beta version of AI English conversation bot for free! Enjoy the conv
 <br>
 If you don't mind, please answer the questionnaires.<br>
 -->
-β版のAI英会話ボットを無料で公開しています。<br>
-ぜひ、会話をしてみてください。<br>
-<br>
-よろしければ、アンケートにご協力くださいませ。<br>
+β版のAI英会話ボットを無料公開中です。<br>
+よろしければ、評価をお願いします。<br>
      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSnR82_GW2k0CTMfQdKTikC2GwjnL9jNrnF0BhT8HzLD1rdg/viewform?usp=pp_url&entry.866182014=3&entry.731067103=3&entry.1202052222=3&entry.819699180=3">アンケートフォームへ</a>
      </td>
      </tr>
