@@ -30,11 +30,12 @@ SHARED: Dict[Any, Any] = {}
 STYLE_SHEET = "https://altavista21.com/my.css"
 FONT_AWESOME = "https://altavista21.com/vue.js"
 WEB_HTML = """
-<html>
+<html lang="ja">
     <link rel="stylesheet" href={} media="screen"/>
     <script defer src={}></script>
     <head>
     <title> Alisa|English conversation practice with AI chat.</title>
+    <meta http-equiv="content-type" charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
@@ -47,7 +48,7 @@ WEB_HTML = """
     gtag('config', 'UA-186249509-1');
     </script>
     </head>
-<body link="#5f9ea0">
+<body link="#ff69b4">
     <DIV align="center">
     <table>
      <tr>
@@ -56,10 +57,16 @@ WEB_HTML = """
      <img class="pcview" src="https://altavista21.com/img/alisa.png">
      </td>
      <td class="left font_color"><br>
+     <!--
 This is the beta version of AI English conversation bot for free! Enjoy the conversation.<br>
 <br>
-If you don't mind, please email us your review.<br>
-     <a href="mailto:alisa10202100@gmail.com">Send Mail</a>
+If you don't mind, please answer the questionnaires.<br>
+-->
+期間限定で、β版のAI英会話ボットを無料で公開しています。<br>
+まだまだ開発途中ですが、ぜひ、AIと会話をしてみてください。<br>
+<br>
+よろしければ、製品化の参考にアンケートにご協力くださいませ。<br>
+     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSnR82_GW2k0CTMfQdKTikC2GwjnL9jNrnF0BhT8HzLD1rdg/viewform?usp=pp_url&entry.866182014=3&entry.731067103=3&entry.1202052222=3&entry.819699180=3">アンケートフォームへ</a>
      </td>
      </tr>
      </table>
