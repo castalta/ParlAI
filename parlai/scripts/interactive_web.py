@@ -47,32 +47,53 @@ WEB_HTML = """
     gtag('config', 'UA-186249509-1');
     </script>
     </head>
-    <body>
-     <div style="text-align: center">
-     <p><img class="spview" src="https://altavista21.com/img/alisa_sp.png"></p>
-     <p><img class="pcview" src="https://altavista21.com/img/alisa.png"></p>
+<body link="#5f9ea0">
+    <DIV align="center">
+    <table>
+     <tr>
+     <td>
+     <img class="spview" src="https://altavista21.com/img/alisa_sp.png">
+     <img class="pcview" src="https://altavista21.com/img/alisa.png">
+     </td>
+     <td class="left font_color"><br>
+This is the beta version of AI English conversation bot for free! Enjoy the conversation.<br>
+<br>
+If you don't mind, please email us your review.
+     <a href="mailto:alisa10202100@gmail.com">Send Mail</a>
+     </td>
+     </tr>
+     </table>
      </div>
+     <div>
         <div class="columns" style="height: 70%">
             <div class="column is-three-fifths is-offset-one-fifth">
                 <div id="parent" class="hero-body scrollbar_none" style="overflow-wrap: normal;overflow-y:auto; height: calc(100% - 76px); padding-top: 1em; padding-bottom: 0;">
                         <div class="bubble04">
                           <p class="typewriter wordb">
-                            Hi, Hello!
+                            Hi, hello!
                           </p>
                         </div>
                 </div>
-                
                 <div style="margin:0 auto;" class="hero-foot column is-four-fifths" style="height: 76px">
-                <form id = "interact">
-                <table align="center" width="90%">
-                <tr>
-                <td><input class="input my-blue2" type="text" id="userIn" placeholder="Type in a message"></td>
-                <span class="focus_line"></span>
-                <td><input id="respond" type="image" src="https://altavista21.com/img/send_sp3.png" alt="send"></td>
-                
-                </tr>
-                </table>
-                </form>
+                  <form id = "interact">
+                      <div class="field is-grouped">
+                        <p class="control is-expanded">
+                          <input class="input my-blue2" type="text" id="userIn" placeholder="Type a message">
+                        </p>
+                        <p class="control">
+                          <button id="respond" type="submit" class="button has-text-white-ter has-background-mypink">
+                            Send
+                          </button>
+                        </p>
+                        <!--
+                        <p class="control">
+                          <button id="restart" type="reset" class="button has-text-white-ter has-background-mypink">
+                            Restart
+                          </button>
+                        </p>
+                        -->
+                      </div>
+                  </form>
                 </div>
             </div>
         </div>
@@ -117,11 +138,11 @@ WEB_HTML = """
                 if(agent === "Model"){{
                 var br = document.createElement("br");
                 article.appendChild(br);
-                article.appendChild(speaker);
+                // article.appendChild(speaker); icon of sound
                 
                 var tran = document.createElement("img");
                 tran.src = "https://altavista21.com/img/translate.png";
-                article.appendChild(tran);
+                // article.appendChild(tran); icon of transltation 
                 // var note = document.createElement("img");
                 // note.src = "https://altavista21.com/img/note.png";
                 // article.appendChild(note);
