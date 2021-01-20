@@ -11,7 +11,7 @@ max_workers: 2000
 opt:
   debug: True
   models:
-    blender_3B:
+    blender_90M:
       model: transformer/generator
       model_file: zoo:blender/blender_3B/model
       interactive_mode: True
