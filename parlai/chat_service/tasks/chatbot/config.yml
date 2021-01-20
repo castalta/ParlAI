@@ -3,17 +3,17 @@ tasks:
     onboard_world: MessengerBotChatOnboardWorld
     task_world: MessengerBotChatTaskWorld
     timeout: 1800
-    agents_required: 0
+    agents_required: 1
 task_name: chatbot
 world_module: parlai.chat_service.tasks.chatbot.worlds
 overworld: MessengerOverworld
-max_workers: 30
+max_workers: 2000
 opt:
   debug: True
   models:
-    blender_90M:
+    blender_3B:
       model: transformer/generator
-      model_file: zoo:blender/blender_90M/model
+      model_file: zoo:blender/blender_3B/model
       interactive_mode: True
       no_cuda: True
 additional_args:
