@@ -39,7 +39,9 @@ WEB_HTML = """
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186249509-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -47,6 +49,7 @@ WEB_HTML = """
     gtag('js', new Date());
     gtag('config', 'UA-186249509-1');
     </script>
+    -->
     </head>
 <body link="#ff69b4">
     <DIV align="center">
