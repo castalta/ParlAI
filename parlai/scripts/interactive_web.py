@@ -41,7 +41,7 @@ WEB_HTML = """
     <meta http-equiv="Cache-Control" content="no-cache">
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    
+    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186249509-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -49,7 +49,7 @@ WEB_HTML = """
     gtag('js', new Date());
     gtag('config', 'UA-186249509-1');
     </script>
-    
+    -->
     </head>
 <body link="#ff69b4">
     <DIV align="center">
