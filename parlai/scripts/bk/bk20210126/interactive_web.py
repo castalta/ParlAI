@@ -41,7 +41,7 @@ WEB_HTML = """
     <meta http-equiv="Cache-Control" content="no-cache">
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    
+    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186249509-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -49,32 +49,14 @@ WEB_HTML = """
     gtag('js', new Date());
     gtag('config', 'UA-186249509-1');
     </script>
-    
+    -->
     </head>
 <body link="#ff69b4">
-    <DIV align="center">
-    <table>
-     <tr>
-     <td>
-     <img class="spview" src="https://altavista21.com/img/alisa_sp.png">
-     <img class="pcview" src="https://altavista21.com/img/alisa.png">
-     </td>
-     <td class="left font_color"><br>
-     <!--
-This is the beta version of AI English conversation bot for free! Enjoy the conversation.<br>
-<br>
-If you don't mind, please answer the questionnaires.<br>
--->
-β版のAI英会話ボットを無料公開中です。<br>
-評価をお待ちしています。<br>
-     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSnR82_GW2k0CTMfQdKTikC2GwjnL9jNrnF0BhT8HzLD1rdg/viewform?usp=pp_url&entry.866182014=3&entry.731067103=3&entry.1202052222=3&entry.819699180=3">アンケートフォームへ</a>
-     <br>
-     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-     </td>
-     </tr>
-     </table>
+     <div style="text-align: center">
+     <p><img class="spview" src="https://altavista21.com/img/alisa_sp.png"></p>
+     <p><img class="pcview" src="https://altavista21.com/img/alisa.png"></p>
      </div>
+     <div>
         <div class="columns" style="height: 70%">
             <div class="column is-three-fifths is-offset-one-fifth">
                 <div id="parent" class="hero-body scrollbar_none" style="overflow-wrap: normal;overflow-y:auto; height: calc(100% - 76px); padding-top: 1em; padding-bottom: 0;">
