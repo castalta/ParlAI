@@ -34,7 +34,7 @@ WEB_HTML = """
     <link rel="stylesheet" href={} media="screen"/>
     <script defer src={}></script>
     <head>
-    <title> Alisa|AI英会話アプリのβ版を無料公開</title>
+    <title>Alisa|AI英会話アプリのβ版を無料公開</title>
     <meta name="description" content="自然言語処理で人に寄り添うAI(人工知能)と英会話を練習するチャットアプリ。AIの先端技術を体験。">
     <meta http-equiv="content-type" charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
