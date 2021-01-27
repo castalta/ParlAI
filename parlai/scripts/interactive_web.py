@@ -89,7 +89,7 @@ If you don't mind, please answer the questionnaires.<br>
                   <form id = "interact">
                       <div class="field is-grouped">
                         <p class="control is-expanded">
-                          <input class="input my-blue2" type="text" autocomplete="off" id="userIn" placeholder="Type a message">
+                          <input class="input my-blue2" type="text" id="userIn" placeholder="Type a message">
                         </p>
                         <p class="control">
                           <button id="respond" type="submit" class="button has-text-white-ter has-background-mypink">
